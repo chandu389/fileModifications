@@ -154,13 +154,13 @@ window.onload = function() {
 	$(document).on('click', '#printbtn', () => {
 		   var start = $('#filecontents')[0].selectionStart;
 	       var end = $('#filecontents')[0].selectionEnd;
-	       var val = 'print ""';
+	       var val = 'print ("")';
 	 	   $('#filecontents').val($('#filecontents').val().substring(0, start)
 	                 + val
 	                 + $('#filecontents').val().substring(start));
 	 	   $('#filecontents').focus();
 	 	   $('#filecontents')[0].selectionStart =
-	 		  $('#filecontents')[0].selectionEnd = start + val.length -1;
+	 		  $('#filecontents')[0].selectionEnd = start + val.length -2;
 	 	   }
 	 );
 	
